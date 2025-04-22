@@ -37,3 +37,9 @@ window.onload = async () => {
     console.error("ERROR ERROR")
   }
 };
+
+function applyColor() {
+  const color = document.getElementById("colorPicker").value;
+  document.body.style.backgroundColor = color;
+}
+
