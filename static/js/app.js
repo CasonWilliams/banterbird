@@ -19,10 +19,13 @@ async function submitPost() {
           username: username,
           message: message,
         }),
+
       });
     } catch (error) {
       console.error("post failed", error);
+  
     }
+    location.reload()
 }
 
 window.onload = async () => {
