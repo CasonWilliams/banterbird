@@ -41,8 +41,18 @@ window.onload = async () => {
   }
 };
 
+//colorpicker
 function applyColor() {
   const color = document.getElementById("colorPicker").value;
   document.body.style.backgroundColor = color;
+  localStorage.setItem("bgColor", color);
 }
 
+// Load saved color on page load
+window.addEventListener("DOMContentLoaded", () => {
+  const savedColor = localStorage.getItem("bgColor");
+  if (savedColor) {
+      document.body.style.backgroundColor = savedColor;
+      document.getElementById("colorPicker").value = savedColor;
+  }
+});
